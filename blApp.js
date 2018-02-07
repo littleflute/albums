@@ -29,12 +29,12 @@ function _blAlbumClass(_v,_list)
 	}
 	for(i in _list){
 		var d = blo0.blDiv(_v,_v.id + "_album" + i,"",blColor[i]);
-		this.blhFun1(d,_album.title,300 + 50*i,50,500,400,blColor[i]);
+		this.blhFun1(d,_list[i].title,300 + 50*i,50,500,400,blColor[i]);
 	}
 }
 function _blJobClass(p)
 { 
-	this.v = "v0.0.215"; 
+	this.v = "v0.0.221"; 
 	this.blrShowList = function(b , d){
 		
 		if(!d.v){
