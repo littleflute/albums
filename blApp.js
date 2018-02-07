@@ -15,12 +15,12 @@ function _blAlbumClass(_v,_list)
 { 
 	var d = _v;
 	for(i in _list){
-		blo0.blDiv(d,d.id + "_album",_list[i].title ,blGrey[i]);
+		blo0.blDiv(d,d.id + "_album" + i,_list[i].title ,blGrey[i]);
 	}
 }
 function _blJobClass(p)
 { 
-	this.v = "v0.0.133"; 
+	this.v = "v0.0.134"; 
 	this.blrShowList = function(b , d){
 		
 		if(!d.v){
@@ -46,7 +46,7 @@ function _blJobClass(p)
 function CXdMainFrame()
 {
 
-	this.v		= "v0.0.233 ";  
+	this.v		= "v0.0.234 ";  
 	var s = this.v;
 		s += "<a target='_blank' href='https://github.com/littleflute/albums/edit/master/blApp.js'"
 		s += " style='color:blue;'";
