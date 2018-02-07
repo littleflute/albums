@@ -1,6 +1,6 @@
 
 
-	function _on_off_div(b,d){
+function _on_off_div(b,d){
 		if(d.style.display=="block"){
 			d.style.display="none"; 
 			b.style.backgroundColor = blGrey[0]; 
@@ -9,11 +9,18 @@
 			d.style.display="block"; 
 			b.style.backgroundColor = blGrey[5]; 
 		}
-	};
+};
 
+function _blAlbumClass(_v,_list)
+{ 
+	var d = _v;
+	for(i in _list){
+		blo0.blDiv(d,d.id + "_album",_list[i].title ,blGrey[i]);
+	}
+}
 function _blJobClass(p)
 { 
-	this.v = "v0.0.131"; 
+	this.v = "v0.0.132"; 
 	this.blrShowList = function(b , d){
 		
 		if(!d.v){
@@ -21,7 +28,7 @@ function _blJobClass(p)
 			d.v.d = blo0.blDiv(d.v,d.v.id + "_d","d:",blGrey[1]);
 			var href = "https://api.github.com/repos/littleflute/albums/issues";	
 			function _loadIssues (o) {
-				d.v.d.innerHTML = o.length;
+				_blAlbumClass(d.v.d,o);
 			}
 			w3.getHttpObject( href , _loadIssues );
 		}
@@ -39,7 +46,7 @@ function _blJobClass(p)
 function CXdMainFrame()
 {
 
-	this.v		= "v0.0.232 ";  
+	this.v		= "v0.0.233 ";  
 	var s = this.v;
 		s += "<a target='_blank' href='https://github.com/littleflute/albums/edit/master/blApp.js'"
 		s += " style='color:blue;'";
