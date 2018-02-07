@@ -1,7 +1,19 @@
 
+
+	function _on_off_div(b,d){
+		if(d.style.display=="block"){
+			d.style.display="none"; 
+			b.style.backgroundColor = blGrey[0]; 
+		}
+		else{
+			d.style.display="block"; 
+			b.style.backgroundColor = blGrey[5]; 
+		}
+	};
+
 function _blJobClass(p)
 { 
-	this.v = "v0.0.124"; 
+	this.v = "v0.0.125"; 
 	this.blrShowList = function(b , d){
 		
 		if(!d.v){
@@ -26,18 +38,7 @@ function _blJobClass(p)
 function CXdMainFrame()
 {
 
-	function _on_off_div(b,d){
-		if(d.style.display=="block"){
-			d.style.display="none"; 
-			b.style.backgroundColor = blGrey[0]; 
-		}
-		else{
-			d.style.display="block"; 
-			b.style.backgroundColor = blGrey[5]; 
-		}
-	};
-
-	this.v		= "v0.0.223 ";  
+	this.v		= "v0.0.224 ";  
 	var s = this.v;
 		s += "<a target='_blank' href='https://github.com/littleflute/albums/edit/master/blApp.js'"
 		s += " style='color:blue;'";
