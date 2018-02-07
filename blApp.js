@@ -20,11 +20,11 @@ function _blAlbumClass(_v,_list)
 }
 function _blJobClass(p)
 { 
-	this.v = "v0.0.134"; 
+	this.v = "v0.0.135"; 
 	this.blrShowList = function(b , d){
 		
 		if(!d.v){
-			d.v = blo0.blMDiv(d,d.id + "_v","AlbumList:",111,111,500,400,blGrey[0]);
+			d.v = blo0.blMDiv(d,d.id + "_v","AlbumList:",111,111,500,400,"green");
 			d.v.d = blo0.blDiv(d.v,d.v.id + "_d","d:",blGrey[1]);
 			var href = "https://api.github.com/repos/littleflute/albums/issues";	
 			function _loadIssues (o) {
