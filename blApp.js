@@ -14,14 +14,14 @@ function _on_off_div(b,d){
 function _blAlbumClass(_v,_list)
 { 
 	for(i in _list){
-		var d = blo0.blDiv(_v,_v.id + "_album" + i,_list[i].title ,blGrey[i]);
+		var d = blo0.blDiv(_v,_v.id + "_album" + i,_list[i].title ,"red");
 		d.all = blo0.blDiv(d,d.id + "_all",_list[i].title ,blGrey[i]);
 		blo0.blShowObj2Div(d.all,_list[i]);
 	}
 }
 function _blJobClass(p)
 { 
-	this.v = "v0.0.144"; 
+	this.v = "v0.0.145"; 
 	this.blrShowList = function(b , d){
 		
 		if(!d.v){
