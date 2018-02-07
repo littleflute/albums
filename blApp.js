@@ -50,7 +50,7 @@ function _blAlbumClass(_v,_list)
 }
 function _blJobClass(p)
 { 
-	this.v = "v0.0.232"; 
+	this.v = "v0.0.233"; 
 	this.blrShowList = function(b , d){
 		
 		if(!d.v){
