@@ -1,7 +1,7 @@
 
 function _blJobClass(p)
 { 
-	this.v = "v0.0.115"; 
+	this.v = "v0.0.121"; 
 	this.blrShowList = function(blrSetB , blrSetV){
 		var href = "https://api.github.com/repos/littleflute/albums/issues";	
 		function _loadIssues (o) {
