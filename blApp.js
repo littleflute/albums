@@ -19,8 +19,8 @@ function _blAlbumClass(_v,_list)
 		d.b.onclick = function(_d, _album){
 			return function(){
 				if(!_d.v){
-					_d.v = blo0.blMDiv(document.body,_d.id + "_v","AlbumInf:",111,111,500,400,"gold");
-					_d.v.d = blo0.blDiv(_d.v,d.v.id + "_d","d" ,"grey");
+					_d.v = blo0.blMDiv(document.body,_d.id + "_v",_album.title,111,111,500,400,"gold");
+					_d.v.d = blo0.blDiv(_d.v,d.v.id + _album.title,"d" ,"grey");
 					blo0.blShowObj2Div(_d.v.d,_album);
 				}	
 				_on_off_div(this,_d.v);
@@ -30,7 +30,7 @@ function _blAlbumClass(_v,_list)
 }
 function _blJobClass(p)
 { 
-	this.v = "v0.0.152"; 
+	this.v = "v0.0.153"; 
 	this.blrShowList = function(b , d){
 		
 		if(!d.v){
