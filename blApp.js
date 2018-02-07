@@ -16,7 +16,7 @@ function _blAlbumClass(_v,_list)
 	this.blhFun0 = function(_Div,_oAlbum,_x,_y,_w,_h,_color){
 		var sFun = "blhFun0" + _oAlbum.title;
 		var d = _Div;
-		d.b = blo0.blBtn(d,d.id + "_btn" + sFun, sFun ,blColor[2]);
+		d.b = blo0.blBtn(d,d.id + "_btn" + sFun, "blhFun0" ,blColor[2]);
 		d.b.onclick = function(_d, _album){
 			return function(){
 				if(!_d.v0){
@@ -76,7 +76,7 @@ function _blJobClass(p)
 function CXdMainFrame()
 {
 
-	this.v		= "v0.0.242 ";  
+	this.v		= "v0.0.243 ";  
 	var s = this.v;
 		s += "<a target='_blank' href='https://github.com/littleflute/albums/edit/master/blApp.js'"
 		s += " style='color:blue;'";
