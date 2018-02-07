@@ -13,9 +13,23 @@ function _on_off_div(b,d){
 
 function _blAlbumClass(_v,_list)
 { 
+	this.blhFun0 = function(_Div,_oAlbum,_x,_y,_w,_h,_color){
+		var d = _Div;
+		d.b = blo0.blBtn(d,d.id + "_b","blhFun0" ,blColor[2]);
+		d.b.onclick = function(_d, _album){
+			return function(){
+				if(!_d.v){
+					_d.v = blo0.blMDiv(document.body,_d.id + "_v",_album.title,_x,_y,_w,_h,_color);
+					_d.v.d = blo0.blDiv(_d.v,_d.v.id + _album.title,_album.url ,"grey");
+					blo0.blShowObj2Div(_d.v.d, _album);					 
+				}	
+				_on_off_div(this,_d.v);
+			}
+		}(d,_oAlbum);		
+	}
 	this.blhFun1 = function(_Div,_oAlbum,_x,_y,_w,_h,_color){
 		var d = _Div;
-		d.b = blo0.blBtn(d,d.id + "_b",_oAlbum.title ,blGrey[i]);
+		d.b = blo0.blBtn(d,d.id + "_b",_oAlbum.title ,blGrey[0]);
 		d.b.onclick = function(_d, _album){
 			return function(){
 				if(!_d.v){
@@ -29,12 +43,13 @@ function _blAlbumClass(_v,_list)
 	}
 	for(i in _list){
 		var d = blo0.blDiv(_v,_v.id + "_album" + i,"",blColor[i]);
+		this.blhFun0(d,_list[i],300 + 50*i,50,500,400,blColor[i]);
 		this.blhFun1(d,_list[i],300 + 50*i,50,500,400,blColor[i]);
 	}
 }
 function _blJobClass(p)
 { 
-	this.v = "v0.0.223"; 
+	this.v = "v0.0.224"; 
 	this.blrShowList = function(b , d){
 		
 		if(!d.v){
