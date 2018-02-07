@@ -15,7 +15,7 @@ function _blAlbumClass(_v,_list)
 { 
 	this.blhFun0 = function(_Div,_oAlbum,_x,_y,_w,_h,_color){
 		var d = _Div;
-		d.b = blo0.blBtn(d,d.id + "_b","blhFun0" ,blColor[2]);
+		d.b = blo0.blBtn(d,d.id + "_blhFun0","blhFun0" ,blColor[2]);
 		d.b.onclick = function(_d, _album){
 			return function(){
 				if(!_d.v){
@@ -29,7 +29,7 @@ function _blAlbumClass(_v,_list)
 	}
 	this.blhFun1 = function(_Div,_oAlbum,_x,_y,_w,_h,_color){
 		var d = _Div;
-		d.b = blo0.blBtn(d,d.id + "_b",_oAlbum.title ,blGrey[0]);
+		d.b = blo0.blBtn(d,d.id + "_blhFun1",_oAlbum.title ,blGrey[0]);
 		d.b.onclick = function(_d, _album){
 			return function(){
 				if(!_d.v){
@@ -49,7 +49,7 @@ function _blAlbumClass(_v,_list)
 }
 function _blJobClass(p)
 { 
-	this.v = "v0.0.224"; 
+	this.v = "v0.0.225"; 
 	this.blrShowList = function(b , d){
 		
 		if(!d.v){
