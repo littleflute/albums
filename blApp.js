@@ -1,7 +1,7 @@
 
 function _blJobClass(p)
 { 
-	this.v = "v0.0.52"; 
+	this.v = "v0.0.53"; 
 
 	this.blhInit = function(){
 	}
@@ -10,6 +10,18 @@ function _blJobClass(p)
 
 function CXdMainFrame()
 {
+
+	function _on_off_div(b,d){
+		if(d.style.display=="block"){
+			d.style.display="none"; 
+			b.style.backgroundColor = blGrey[0]; 
+		}
+		else{
+			d.style.display="block"; 
+			b.style.backgroundColor = blGrey[5]; 
+		}
+	};
+
 	this.v		= "v0.0.221 ";  
 	var s = this.v;
 		s += "<a target='_blank' href='https://github.com/littleflute/vc6/edit/master/XdHtml/2.html'"
@@ -27,8 +39,7 @@ function CXdMainFrame()
 		s +=">";
 		s += " index.html ";
 		s += "</a>"; 
-	var d 	= blo0.blMDiv(document.body,"id_div_CXdMainFrame_ui",s,0,0,800,100,blGrey[2]);
-	d.d1	= blo0.blDiv(d,d.id+"d1","d1",blGrey[0]);	blo0.blhInitUI(d.d1);  var b = bl$("blhInitUI_btn1");	b.click();	b.click();	 
+	var d 	= blo0.blMDiv(document.body,"id_div_CXdMainFrame_ui",s,0,0,800,100,blGrey[2]); 
 	 
 	
 	d.d2	= blo0.blDiv(d,d.id+"d2","d2:",blGrey[1]);	
