@@ -1,13 +1,19 @@
 
 function _blJobClass(p)
 { 
-	this.v = "v0.0.121"; 
-	this.blrShowList = function(blrSetB , blrSetV){
-		var href = "https://api.github.com/repos/littleflute/albums/issues";	
-		function _loadIssues (o) {
-			alert(o.length);
+	this.v = "v0.0.123"; 
+	this.blrShowList = function(b , d){
+		
+		if(!d.v){
+			d.v = blo0.blMDiv(d,d.id + "_v","AlbumList:",111,111,500,400,blGrey[0]);
+			d.v.d = blo0.blDiv(d.v,d.v.id + "_d","d:",blGrey[1]);
+			var href = "https://api.github.com/repos/littleflute/albums/issues";	
+			function _loadIssues (o) {
+				d.v.d.innerHTML = o.length;
+			}
+			w3.getHttpObject( href , _loadIssues );
 		}
-		w3.getHttpObject( href , _loadIssues );
+		_on_off_div(b,d.v);
 	}
 	p.d	= blo0.blDiv(p,p.id+"d","d:",blGrey[1]);	
      	blo0.blShowObj2Div(p.d,this);
