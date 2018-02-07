@@ -19,9 +19,9 @@ function _blAlbumClass(_v,_list)
 		d.b.onclick = function(_d, _album){
 			return function(){
 				if(!_d.v){
-					_d.v = blo0.blMDiv(document.body,_d.id + "_v",_album.title,111,111,500,400,"gold");
-					_d.v.d = blo0.blDiv(_d.v,d.v.id + _album.title,_album.url ,"grey");
-					 
+					_d.v = blo0.blMDiv(document.body,_d.id + "_v",_album.title,111,111,500,400,"brown");
+					_d.v.d = blo0.blDiv(_d.v,_d.v.id + _album.title,_album.url ,"grey");
+					blo0.blShowObj2Div(_d.v.d, _album);					 
 				}	
 				_on_off_div(this,_d.v);
 			}
@@ -30,7 +30,7 @@ function _blAlbumClass(_v,_list)
 }
 function _blJobClass(p)
 { 
-	this.v = "v0.0.154"; 
+	this.v = "v0.0.155"; 
 	this.blrShowList = function(b , d){
 		
 		if(!d.v){
@@ -56,14 +56,14 @@ function _blJobClass(p)
 function CXdMainFrame()
 {
 
-	this.v		= "v0.0.234 ";  
+	this.v		= "v0.0.235 ";  
 	var s = this.v;
 		s += "<a target='_blank' href='https://github.com/littleflute/albums/edit/master/blApp.js'"
 		s += " style='color:blue;'";
 		s +=">";
 		s += " blApp.js*  ";
 		s += "</a>"; 
-		s += "<a href='blApp.js'";
+		s += "<a target='_blank'  href='blApp.js'";
 		s += " style='color:yellow;'";
 		s +=">";
 		s += " blApp.js ";
