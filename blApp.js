@@ -28,13 +28,13 @@ function _blAlbumClass(_v,_list)
 		}(d,_list[i]);		
 	}
 	for(i in _list){
-		var d = blo0.blDiv(_v,_v.id + "_album" + i,_list[i].title ,blColor[i]);
-		this.blhFun1(d,"fun1",300 + 50*i,50,500,400,blColor[i]);
+		var d = blo0.blDiv(_v,_v.id + "_album" + i,"",blColor[i]);
+		this.blhFun1(d,_album.title,300 + 50*i,50,500,400,blColor[i]);
 	}
 }
 function _blJobClass(p)
 { 
-	this.v = "v0.0.213"; 
+	this.v = "v0.0.214"; 
 	this.blrShowList = function(b , d){
 		
 		if(!d.v){
