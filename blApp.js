@@ -34,7 +34,7 @@ function _blAlbumClass(_v,_list)
 }
 function _blJobClass(p)
 { 
-	this.v = "v0.0.214"; 
+	this.v = "v0.0.215"; 
 	this.blrShowList = function(b , d){
 		
 		if(!d.v){
