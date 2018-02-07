@@ -14,12 +14,13 @@ function _on_off_div(b,d){
 function _blAlbumClass(_v,_list)
 { 
 	this.blhFun0 = function(_Div,_oAlbum,_x,_y,_w,_h,_color){
+		var sFun = "blhFun0";
 		var d = _Div;
-		d.b = blo0.blBtn(d,d.id + "_blhFun0","blhFun0" ,blColor[2]);
+		d.b = blo0.blBtn(d,d.id + sFun, sFun ,blColor[2]);
 		d.b.onclick = function(_d, _album){
 			return function(){
 				if(!_d.v){
-					_d.v = blo0.blMDiv(document.body,_d.id + "_v",_album.title,_x,_y,_w,_h,_color);
+					_d.v = blo0.blMDiv(document.body,_d.id + sFun,_album.title,_x,_y,_w,_h,_color);
 					_d.v.d = blo0.blDiv(_d.v,_d.v.id + _album.title,_album.url ,"grey");
 					blo0.blShowObj2Div(_d.v.d, _album);					 
 				}	
@@ -49,7 +50,7 @@ function _blAlbumClass(_v,_list)
 }
 function _blJobClass(p)
 { 
-	this.v = "v0.0.231"; 
+	this.v = "v0.0.232"; 
 	this.blrShowList = function(b , d){
 		
 		if(!d.v){
