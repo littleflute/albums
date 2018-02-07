@@ -13,9 +13,9 @@ function _on_off_div(b,d){
 
 function _blAlbumClass(_v,_list)
 { 
-	this.blhFun1 = function(_o,_txt,_x,_y,_w,_h,_color){
-		var d = _o;
-		d.b = blo0.blBtn(d,d.id + "_b",_txt ,blGrey[i]);
+	this.blhFun1 = function(_Div,_oAlbum,_x,_y,_w,_h,_color){
+		var d = _Div;
+		d.b = blo0.blBtn(d,d.id + "_b",_oAlbum.title ,blGrey[i]);
 		d.b.onclick = function(_d, _album){
 			return function(){
 				if(!_d.v){
@@ -25,16 +25,16 @@ function _blAlbumClass(_v,_list)
 				}	
 				_on_off_div(this,_d.v);
 			}
-		}(d,_list[i]);		
+		}(d,_oAlbum);		
 	}
 	for(i in _list){
 		var d = blo0.blDiv(_v,_v.id + "_album" + i,"",blColor[i]);
-		this.blhFun1(d,_list[i].title,300 + 50*i,50,500,400,blColor[i]);
+		this.blhFun1(d,_list[i],300 + 50*i,50,500,400,blColor[i]);
 	}
 }
 function _blJobClass(p)
 { 
-	this.v = "v0.0.222"; 
+	this.v = "v0.0.223"; 
 	this.blrShowList = function(b , d){
 		
 		if(!d.v){
