@@ -19,12 +19,12 @@ function _blAlbumClass(_v,_list)
 		d.b = blo0.blBtn(d,d.id + "_btn" + sFun, sFun ,blColor[2]);
 		d.b.onclick = function(_d, _album){
 			return function(){
-				if(!_d.v){
-					_d.v = blo0.blMDiv(document.body,_d.id + "_div_" + sFun,_album.title,_x,_y,_w,_h,_color);
-					_d.v.d = blo0.blDiv(_d.v,_d.v.id + _album.title,_album.url ,"grey");
-					blo0.blShowObj2Div(_d.v.d, _album);					 
+				if(!_d.v0){
+					_d.v0 = blo0.blMDiv(document.body,_d.id + "_div_" + sFun,_album.title,_x,_y,_w,_h,_color);
+					_d.v0.d = blo0.blDiv(_d.v0,_d.v0.id + _album.title,_album.url ,"grey");
+					blo0.blShowObj2Div(_d.v0.d, _album);					 
 				}	
-				_on_off_div(this,_d.v);
+				_on_off_div(this,_d.v0);
 			}
 		}(d,_oAlbum);		
 	}
@@ -50,7 +50,7 @@ function _blAlbumClass(_v,_list)
 }
 function _blJobClass(p)
 { 
-	this.v = "v0.0.234"; 
+	this.v = "v0.0.235"; 
 	this.blrShowList = function(b , d){
 		
 		if(!d.v){
