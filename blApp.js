@@ -39,7 +39,7 @@ function _blJobClass(p)
 function CXdMainFrame()
 {
 
-	this.v		= "v0.0.225 ";  
+	this.v		= "v0.0.231 ";  
 	var s = this.v;
 		s += "<a target='_blank' href='https://github.com/littleflute/albums/edit/master/blApp.js'"
 		s += " style='color:blue;'";
@@ -66,7 +66,8 @@ function CXdMainFrame()
 			}
 			_on_off_div(this,_v.ui);
 		}
-	}(d.d2)
+	}(d.d2);
+	d.d2.b1.click();
 }
 function CXdAPP()
 {
