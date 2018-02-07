@@ -1,7 +1,7 @@
 
 function _blJobClass(p)
 { 
-	this.v = "v0.0.113"; 
+	this.v = "v0.0.114"; 
 	this.blrShowList = function(blrSetB , blrSetV){
 		
 			function _loadIssues (o) {
@@ -50,7 +50,7 @@ function CXdMainFrame()
 		}
 	};
 
-	this.v		= "v0.0.222 ";  
+	this.v		= "v0.0.223 ";  
 	var s = this.v;
 		s += "<a target='_blank' href='https://github.com/littleflute/albums/edit/master/blApp.js'"
 		s += " style='color:blue;'";
