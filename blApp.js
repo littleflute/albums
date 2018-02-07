@@ -1,32 +1,13 @@
 
 function _blJobClass(p)
 { 
-	this.v = "v0.0.114"; 
+	this.v = "v0.0.115"; 
 	this.blrShowList = function(blrSetB , blrSetV){
-		
-			function _loadIssues (o) {
-				for(i in o){
-					var b = blo0.blBtn ( blrSetV .v.d,blrSetV .v.d.id + "_API_" + i,"api"+i,blColor[i]); 
-					b.onclick = function( _d , _txt, _i ){
-						return function(){
-							if(!this.v){
-								this.v = blo0.blDiv( _d , this.id + "_v", "apiV_ " + _i, blGrey[2]); 													this.v.b = blo0.blBtn( this.v , this.v.id + "_btn", "run", "green"); 
-								this.v.b.d = this.v;
-								this.v.b.onclick = function(){
-									var a = _txt;
-									var b = a.split("api:");
-									var c = " var f = " + b[1];
-									eval(c);
-									f(this,this.d);
-									;
-								};			
-							}			
-							_on_off_div(this,this.v);
-						}
-					}(blrSetV.v.d,o[i].body, i); 
- 				}
-			}
-			w3.getHttpObject( href , _loadIssues );
+		var href = "https://api.github.com/repos/littleflute/albums/issues";	
+		function _loadIssues (o) {
+			alert(o.length);
+		}
+		w3.getHttpObject( href , _loadIssues );
 	}
 	p.d	= blo0.blDiv(p,p.id+"d","d:",blGrey[1]);	
      	blo0.blShowObj2Div(p.d,this);
