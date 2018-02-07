@@ -1,8 +1,10 @@
+<script>  
 
 function _blJobClass(p)
 { 
-	this.v = "v0.0.53"; 
-
+	this.v = "v0.0.55"; 
+	p.d	= blo0.blDiv(p,p.id+"d","d:",blGrey[1]);	
+    blo0.blShowObj2Div(p.d,this);
 	this.blhInit = function(){
 	}
 }
@@ -47,7 +49,7 @@ function CXdMainFrame()
 	d.d2.b1.onclick = function(_v){ 
 		return function(){  
 			if(!_v.ui) {
-				_v.ui= blo0.blMDiv(_v, _v.id + "_ui","blJob",110,110,800,100,blGrey[1]);
+				_v.ui= blo0.blMDiv(_v, _v.id + "_ui","blJob",1,111,800,100,blGrey[1]);
 				var _blj = new _blJobClass(_v.ui);
 				_blj.blhInit();
 			}
