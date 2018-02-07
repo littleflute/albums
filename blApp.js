@@ -1,8 +1,7 @@
-<script>  
 
 function _blJobClass(p)
 { 
-	this.v = "v0.0.55"; 
+	this.v = "v0.0.111"; 
 	p.d	= blo0.blDiv(p,p.id+"d","d:",blGrey[1]);	
     blo0.blShowObj2Div(p.d,this);
 	this.blhInit = function(){
