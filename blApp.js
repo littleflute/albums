@@ -1,7 +1,7 @@
 
 function _blJobClass(p)
 { 
-	this.v = "v0.0.123"; 
+	this.v = "v0.0.124"; 
 	this.blrShowList = function(b , d){
 		
 		if(!d.v){
