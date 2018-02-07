@@ -13,7 +13,7 @@
 
 function _blJobClass(p)
 { 
-	this.v = "v0.0.125"; 
+	this.v = "v0.0.131"; 
 	this.blrShowList = function(b , d){
 		
 		if(!d.v){
@@ -31,6 +31,7 @@ function _blJobClass(p)
      	blo0.blShowObj2Div(p.d,this);
 	
 	this.blhInit = function(){
+		bl$("blrShowList").click();
 	}
 }
 
@@ -38,7 +39,7 @@ function _blJobClass(p)
 function CXdMainFrame()
 {
 
-	this.v		= "v0.0.224 ";  
+	this.v		= "v0.0.225 ";  
 	var s = this.v;
 		s += "<a target='_blank' href='https://github.com/littleflute/albums/edit/master/blApp.js'"
 		s += " style='color:blue;'";
