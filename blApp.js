@@ -1,7 +1,7 @@
 
 function _blJobClass(p)
 { 
-	this.v = "v0.0.111"; 
+	this.v = "v0.0.112"; 
 	p.d	= blo0.blDiv(p,p.id+"d","d:",blGrey[1]);	
     blo0.blShowObj2Div(p.d,this);
 	this.blhInit = function(){
@@ -23,23 +23,19 @@ function CXdMainFrame()
 		}
 	};
 
-	this.v		= "v0.0.221 ";  
+	this.v		= "v0.0.222 ";  
 	var s = this.v;
-		s += "<a target='_blank' href='https://github.com/littleflute/vc6/edit/master/XdHtml/2.html'"
+		s += "<a target='_blank' href='https://github.com/littleflute/albums/edit/master/blApp.js'"
 		s += " style='color:blue;'";
 		s +=">";
-		s += " 2.html*  ";
+		s += " blApp.js*  ";
 		s += "</a>"; 
-		s += "<a href='2.html'";
+		s += "<a href='blApp.js'";
 		s += " style='color:yellow;'";
 		s +=">";
-		s += " 2.html ";
+		s += " blApp.js ";
 		s += "</a>"; 
-		s += "<a href='index.html'";
-		s += " style='color:green;'";
-		s +=">";
-		s += " index.html ";
-		s += "</a>"; 
+	
 	var d 	= blo0.blMDiv(document.body,"id_div_CXdMainFrame_ui",s,0,0,800,100,blGrey[2]); 
 	 
 	
