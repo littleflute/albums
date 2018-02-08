@@ -13,7 +13,7 @@ function _on_off_div(b,d){
 
 function _blParseAlbumClass(_album)
 { 
-	this.v = "v0.0.31";
+	this.v = "v0.0.32";
 	var _this = this;
 	var _aplayerListTa = null;
 	var _sDebug = _album.url;
@@ -33,7 +33,7 @@ function _blParseAlbumClass(_album)
 		var _al = o.audioList;
 		var _ll = o.lrcList;
 		var _path = o.url;
-		var _pic = o.pic;
+		var _pic = o.pic1;
 		var _title = o.title;
 		var _artist = o.artist;
 
