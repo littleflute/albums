@@ -1,4 +1,4 @@
-// 124
+// 125
 
 function _on_off_div(b,d){
 		if(d.style.display=="block"){
@@ -13,7 +13,7 @@ function _on_off_div(b,d){
 
 function _blParseAlbumClass(_album)
 { 
-	this.v = "v0.0.15";
+	this.v = "v0.0.21";
 	var _this = this;
 	var _aplayerListTa = null;
 	var _sDebug = _album.url;
@@ -157,8 +157,7 @@ function _blJobClass(p)
 
 function CXdMainFrame()
 {
-
-	this.v		= "v0.0.252 ";  
+	this.v		= "v0.0.253 ";  
 	var s = this.v;
 		s += "<a target='_blank' href='https://github.com/littleflute/albums/edit/master/blApp.js'"
 		s += " style='color:blue;'";
