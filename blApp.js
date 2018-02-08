@@ -1,4 +1,4 @@
-// 113
+// 114
 
 function _on_off_div(b,d){
 		if(d.style.display=="block"){
@@ -13,10 +13,10 @@ function _on_off_div(b,d){
 
 function _blParseAlbumClass(_album)
 { 
-	this.v = "v0.0.5";
+	this.v = "v0.0.11";
 	var _sDebug = "";
 	this.title = _album.title;
-	this.blDebug = function(b,d){d.innerHTML = _sDebug;}
+	this.blrDebug = function(b,d){d.innerHTML = _sDebug;}
 	
 	this.blhGetTxt = function(){
 		var r = "";
@@ -24,7 +24,7 @@ function _blParseAlbumClass(_album)
 		function _getIssue (o) {
 			r = o.body;
 			_sDebug = r;
-			bl&("blDebug").click();
+			bl&("blrDebug").click();
 		}
 		w3.getHttpObject( href , _getIssue );
 		return r;
@@ -130,7 +130,7 @@ function _blAlbumClass(_v,_list)
 }
 function _blJobClass(p)
 { 
-	this.v = "v0.0.242"; 
+	this.v = "v0.0.243"; 
 	this.blrShowList = function(b , d){
 		
 		if(!d.v){
