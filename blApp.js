@@ -13,24 +13,13 @@ function _on_off_div(b,d){
 
 function _blParseAlbumClass(_album)
 { 
-	this.v = "v0.0.14";
+	this.v = "v0.0.15";
+	var _this = this;
 	var _aplayerListTa = null;
 	var _sDebug = _album.url;
 	this.title = _album.title;
 	this.blrDebug = function(b,d){d.innerHTML = _sDebug;}
 	
-	this.blhGetTxt = function(){
-		var r = "";
-		var href = _album.url;	
-		function _getIssue (o) {
-			r = o.body;
-			_sDebug = r;
-			_aplayerListTa = r;
-			bl&("blrDebug").click();
-		}
-		w3.getHttpObject( href , _getIssue );
-		return r;
-	}
 	this.blhCreateAPlayerList = function(txt){
 		var r = '[aplayer autoplay="true"]\n';
 
@@ -79,6 +68,19 @@ function _blParseAlbumClass(_album)
 		return r;
 	}
 
+	this.blhGetTxt = function(){
+		var r = "";
+		var href = _album.url;	
+		function _getIssue (o) {
+			r = o.body;
+			_sDebug = r;
+			_aplayerListTa = r;
+			bl&("blrDebug").click();
+			_aplayerListTa.value = _this.blhCreateAPlayerList(txt); 
+		}
+		w3.getHttpObject( href , _getIssue );
+		return r;
+	}
 	this.blrAplayerList = function(b,d){
 		if(!d.v){
 			d.v = blo0.blDiv(d,d.id+"v4"+_album,"","green");
@@ -88,7 +90,6 @@ function _blParseAlbumClass(_album)
 		}
  
 		var txt= _this.blhGetTxt(); 
-		_aplayerListTa.value = _this.blhCreateAPlayerList(txt); 
 	}
 }
 function _blAlbumClass(_v,_list)
@@ -157,7 +158,7 @@ function _blJobClass(p)
 function CXdMainFrame()
 {
 
-	this.v		= "v0.0.251 ";  
+	this.v		= "v0.0.252 ";  
 	var s = this.v;
 		s += "<a target='_blank' href='https://github.com/littleflute/albums/edit/master/blApp.js'"
 		s += " style='color:blue;'";
