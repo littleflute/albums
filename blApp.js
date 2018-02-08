@@ -1,4 +1,4 @@
-// 115
+// 122
 
 function _on_off_div(b,d){
 		if(d.style.display=="block"){
@@ -13,8 +13,9 @@ function _on_off_div(b,d){
 
 function _blParseAlbumClass(_album)
 { 
-	this.v = "v0.0.11";
-	var _sDebug = "";
+	this.v = "v0.0.13";
+	var _aplayerListTa = null;
+	var _sDebug = _album.url;
 	this.title = _album.title;
 	this.blrDebug = function(b,d){d.innerHTML = _sDebug;}
 	
@@ -24,6 +25,7 @@ function _blParseAlbumClass(_album)
 		function _getIssue (o) {
 			r = o.body;
 			_sDebug = r;
+			_aplayerListTa = r;
 			bl&("blrDebug").click();
 		}
 		w3.getHttpObject( href , _getIssue );
@@ -80,7 +82,7 @@ function _blParseAlbumClass(_album)
 	this.blrAplayerList = function(b,d){
 		if(!d.v){
 			d.v = blo0.blDiv(d,d.id+"v4"+_album,"","green");
-			d.v.ta = blo0.blTextarea(d.v,d.v.id+"ta","ta","grey");
+			_aplayerListTa = d.v.ta = blo0.blTextarea(d.v,d.v.id+"ta","ta","grey");
 			d.v.ta.style.width = "100%";
 			d.v.ta.style.height = "300px";
  
