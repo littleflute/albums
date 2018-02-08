@@ -13,7 +13,7 @@ function _on_off_div(b,d){
 
 function _blParseAlbumClass(_album)
 { 
-	this.v = "v0.0.2";
+	this.v = "v0.0.3";
 	this.blhGetTxt = function(){
 		var r = "";
 		
@@ -69,7 +69,7 @@ function _blParseAlbumClass(_album)
 
 	this.blrAplayerList = function(b,d){
 		if(!d.v){
-			d.v = blo0.blDiv(d,d.id+"v","","green");
+			d.v = blo0.blDiv(d,d.id+"v4"+_album,"","green");
 			d.v.ta = blo0.blTextarea(d.v,d.v.id+"ta","ta","grey");
 			d.v.ta.style.width = "100%";
 			d.v.ta.style.height = "300px";
@@ -145,7 +145,7 @@ function _blJobClass(p)
 function CXdMainFrame()
 {
 
-	this.v		= "v0.0.244 ";  
+	this.v		= "v0.0.245 ";  
 	var s = this.v;
 		s += "<a target='_blank' href='https://github.com/littleflute/albums/edit/master/blApp.js'"
 		s += " style='color:blue;'";
