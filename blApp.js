@@ -1,4 +1,4 @@
-// 132
+// 133
 
 function _on_off_div(b,d){
 		if(d.style.display=="block"){
@@ -13,7 +13,7 @@ function _on_off_div(b,d){
 
 function _blParseAlbumClass(_album)
 { 
-	this.v = "v0.0.22";
+	this.v = "v0.0.23";
 	var _this = this;
 	var _aplayerListTa = null;
 	var _sDebug = _album.url;
@@ -76,20 +76,22 @@ function _blParseAlbumClass(_album)
 			_sDebug = r;
 			_aplayerListTa.value = r;
 			bl$("blrDebug").click();
-			_aplayerListTa.value = _this.blhCreateAPlayerList(txt); 
+			
 		}
 		w3.getHttpObject( href , _getIssue );
 		return r;
 	}
-	this.blrAplayerList = function(b,d){
+	this.blrGetData = function(b,d){
 		if(!d.v){
 			d.v = blo0.blDiv(d,d.id+"v4"+_album,"","green");
 			_aplayerListTa = d.v.ta = blo0.blTextarea(d.v,d.v.id+"ta","ta","grey");
 			d.v.ta.style.width = "100%";
 			d.v.ta.style.height = "300px";
-		}
- 
+		} 
 		var txt= _this.blhGetTxt(); 
+	}
+	this.blrAplayerList = function(b,d){
+		 _aplayerListTa.value = _this.blhCreateAPlayerList(_aplayerListTa.value); 
 	}
 }
 function _blAlbumClass(_v,_list)
@@ -132,7 +134,7 @@ function _blAlbumClass(_v,_list)
 }
 function _blJobClass(p)
 { 
-	this.v = "v0.0.245"; 
+	this.v = "v0.0.251"; 
 	this.blrShowList = function(b , d){
 		
 		if(!d.v){
