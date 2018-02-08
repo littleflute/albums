@@ -11,6 +11,10 @@ function _on_off_div(b,d){
 		}
 };
 
+function _blParseAlbumClass(_album)
+{ 
+	this.v = "v0.0.1";
+}
 function _blAlbumClass(_v,_list)
 { 
 	this.blhFun0 = function(_Div,_oAlbum,_x,_y,_w,_h,_color){
@@ -22,7 +26,7 @@ function _blAlbumClass(_v,_list)
 				if(!_d.v0){
 					_d.v0 = blo0.blMDiv(document.body,_d.id + "_div_" + sFun,_album.title,_x,_y,_w,_h,_color);
 					_d.v0.d = blo0.blDiv(_d.v0,_d.v0.id + _album.title,_album.url ,"grey");
-					blo0.blShowObj2Div(_d.v0.d, _album);					 
+					blo0.blShowObj2Div(_d.v0.d, new _blParseAlbumClass(_album));					 
 				}	
 				_on_off_div(this,_d.v0);
 			}
@@ -50,7 +54,7 @@ function _blAlbumClass(_v,_list)
 }
 function _blJobClass(p)
 { 
-	this.v = "v0.0.241"; 
+	this.v = "v0.0.242"; 
 	this.blrShowList = function(b , d){
 		
 		if(!d.v){
