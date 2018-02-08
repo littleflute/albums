@@ -1,4 +1,4 @@
-// 125
+// 131
 
 function _on_off_div(b,d){
 		if(d.style.display=="block"){
@@ -13,7 +13,7 @@ function _on_off_div(b,d){
 
 function _blParseAlbumClass(_album)
 { 
-	this.v = "v0.0.21";
+	this.v = "v0.0.22";
 	var _this = this;
 	var _aplayerListTa = null;
 	var _sDebug = _album.url;
@@ -74,8 +74,8 @@ function _blParseAlbumClass(_album)
 		function _getIssue (o) {
 			r = o.body;
 			_sDebug = r;
-			_aplayerListTa = r;
-			bl&("blrDebug").click();
+			_aplayerListTa.value = r;
+			bl$("blrDebug").click();
 			_aplayerListTa.value = _this.blhCreateAPlayerList(txt); 
 		}
 		w3.getHttpObject( href , _getIssue );
@@ -132,7 +132,7 @@ function _blAlbumClass(_v,_list)
 }
 function _blJobClass(p)
 { 
-	this.v = "v0.0.244"; 
+	this.v = "v0.0.245"; 
 	this.blrShowList = function(b , d){
 		
 		if(!d.v){
