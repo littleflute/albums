@@ -13,7 +13,9 @@ function _on_off_div(b,d){
 
 function _blParseAlbumClass(_album)
 { 
-	this.v = "v0.0.3";
+	this.v = "v0.0.4";
+	this.title = _album.title;
+	
 	this.blhGetTxt = function(){
 		var r = "";
 		
@@ -82,16 +84,16 @@ function _blParseAlbumClass(_album)
 }
 function _blAlbumClass(_v,_list)
 { 
+	var _divAPlayerList = null;
+	
 	this.blhFun0 = function(_Div,_oAlbum,_x,_y,_w,_h,_color){
 		var sFun = "blhFun0" + _oAlbum.title;
 		var d = _Div;
 		d.b = blo0.blBtn(d,d.id + "_btn" + sFun, "blhFun0" ,blColor[2]);
 		d.b.onclick = function(_d, _album){
 			return function(){
-				if(!_d.v0){
-					_d.v0 = blo0.blMDiv(document.body,_d.id + "_div_" + sFun,_album.title,_x,_y,_w,_h,_color);
-					_d.v0.d = blo0.blDiv(_d.v0,_d.v0.id + _album.title,_album.url ,"grey");
-					blo0.blShowObj2Div(_d.v0.d, new _blParseAlbumClass(_album));					 
+				if(!_d.v0){					
+					blo0.blShowObj2Div(_divAPlayerList, new _blParseAlbumClass(_album));					 
 				}	
 				_on_off_div(this,_d.v0);
 			}
@@ -116,6 +118,7 @@ function _blAlbumClass(_v,_list)
 		this.blhFun0(d,_list[i],300 + 50*i,50,500,400,blColor[i]);
 		this.blhFun1(d,_list[i],300 + 50*i,50,500,400,blColor[i]);
 	}
+	_divAPlayerList = blo0.blDiv(_v,_v.id + "_div_4_create_aplayerList","aplyerList:",blColor[4]);
 }
 function _blJobClass(p)
 { 
@@ -145,7 +148,7 @@ function _blJobClass(p)
 function CXdMainFrame()
 {
 
-	this.v		= "v0.0.245 ";  
+	this.v		= "v0.0.251 ";  
 	var s = this.v;
 		s += "<a target='_blank' href='https://github.com/littleflute/albums/edit/master/blApp.js'"
 		s += " style='color:blue;'";
