@@ -1,4 +1,4 @@
-// 112
+// 113
 
 function _on_off_div(b,d){
 		if(d.style.display=="block"){
@@ -13,12 +13,20 @@ function _on_off_div(b,d){
 
 function _blParseAlbumClass(_album)
 { 
-	this.v = "v0.0.4";
+	this.v = "v0.0.5";
+	var _sDebug = "";
 	this.title = _album.title;
+	this.blDebug = function(b,d){d.innerHTML = _sDebug;}
 	
 	this.blhGetTxt = function(){
 		var r = "";
-		
+		var href = _album.url;	
+		function _getIssue (o) {
+			r = o.body;
+			_sDebug = r;
+			bl&("blDebug").click();
+		}
+		w3.getHttpObject( href , _getIssue );
 		return r;
 	}
 	this.blhCreateAPlayerList = function(txt){
