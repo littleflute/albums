@@ -13,7 +13,72 @@ function _on_off_div(b,d){
 
 function _blParseAlbumClass(_album)
 { 
-	this.v = "v0.0.1";
+	this.v = "v0.0.2";
+	this.blhGetTxt = function(){
+		var r = "";
+		
+		return r;
+	}
+	this.blhCreateAPlayerList = function(txt){
+		var r = '[aplayer autoplay="true"]\n';
+
+		var se = "var o = " + txt;
+		eval(se);
+ 
+		var _nl = o.audioList;
+		var _al = o.audioList;
+		var _ll = o.lrcList;
+		var _path = o.url;
+		var _pic = o.pic;
+		var _title = o.title;
+		var _artist = o.artist;
+
+		for(var i = 0; i < _al.length ; i++){ 
+			r += '\n[mp3 ';
+
+			r += '\n title = "'; 
+			r += _nl[i];
+			r += '"';
+
+			r += '\n artist = "'; 
+			r += _artist;
+			r += '"';
+			 
+			r += '\n url = "';
+			r += _path;
+			r += _al[i];
+			r += '"';
+
+			r += '\n lrc = "';
+			r += _path;
+			r += _ll[i];
+			r += '"';
+
+			r += '\n pic = "';
+			r += _path;
+			r += _pic;
+			r += '"';
+ 
+
+			r += '\n]\n [/mp3]\n';
+		}
+
+		r += '\n[/aplayer]'; 
+		return r;
+	}
+
+	this.blrAplayerList = function(b,d){
+		if(!d.v){
+			d.v = blo0.blDiv(d,d.id+"v","","green");
+			d.v.ta = blo0.blTextarea(d.v,d.v.id+"ta","ta","grey");
+			d.v.ta.style.width = "100%";
+			d.v.ta.style.height = "300px";
+ 
+			var txt= _this.blhGetTxt(); 
+			d.v.ta.value = _this.blhCreateAPlayerList(txt); 
+		}
+		_on_off_div(b,d);
+	}
 }
 function _blAlbumClass(_v,_list)
 { 
@@ -80,7 +145,7 @@ function _blJobClass(p)
 function CXdMainFrame()
 {
 
-	this.v		= "v0.0.243 ";  
+	this.v		= "v0.0.244 ";  
 	var s = this.v;
 		s += "<a target='_blank' href='https://github.com/littleflute/albums/edit/master/blApp.js'"
 		s += " style='color:blue;'";
