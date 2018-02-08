@@ -1,4 +1,4 @@
-// 135
+// 141
 
 function _on_off_div(b,d){
 		if(d.style.display=="block"){
@@ -13,11 +13,14 @@ function _on_off_div(b,d){
 
 function _blParseAlbumClass(_album)
 { 
-	this.v = "v0.0.25";
+	this.v = "v0.0.31";
 	var _this = this;
 	var _aplayerListTa = null;
 	var _sDebug = _album.url;
 	this.title = _album.title;
+	this.blrCreateAplayerList = function(b,d){
+		 _aplayerListTa.value = _this.blhCreateAPlayerList(_aplayerListTa.value); 
+	}
 	this.blrDebug = function(b,d){d.innerHTML = _sDebug;_on_off_div(b,d);}
 	
 	this.blhCreateAPlayerList = function(txt){
@@ -87,9 +90,6 @@ function _blParseAlbumClass(_album)
 			d.v.ta.style.height = "300px";
 		} 
 		var txt= _this.blhGetTxt(); 
-	}
-	this.blrAplayerList = function(b,d){
-		 _aplayerListTa.value = _this.blhCreateAPlayerList(_aplayerListTa.value); 
 	}
 }
 function _blAlbumClass(_v,_list)
