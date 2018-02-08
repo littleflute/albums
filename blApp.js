@@ -157,7 +157,7 @@ function _blJobClass(p)
 
 function CXdMainFrame()
 {
-	this.v		= "v0.0.253 ";  
+	this.v		= "v0.0.254 ";  
 	var s = this.v;
 		s += "<a target='_blank' href='https://github.com/littleflute/albums/edit/master/blApp.js'"
 		s += " style='color:blue;'";
@@ -170,7 +170,7 @@ function CXdMainFrame()
 		s += " blApp.js ";
 		s += "</a>"; 
 	
-	var d 	= blo0.blMDiv(document.body,"id_div_CXdMainFrame_ui",s,0,0,800,100,blGrey[2]); 
+	var d 	= blo0.blMDiv(document.body,"id_div_CXdMainFrame_ui",s,0,0,200,100,blGrey[2]); 
 	 
 	
 	d.d2	= blo0.blDiv(d,d.id+"d2","d2:",blGrey[1]);	
