@@ -1,4 +1,4 @@
-// 122
+// 123
 
 function _on_off_div(b,d){
 		if(d.style.display=="block"){
@@ -13,7 +13,7 @@ function _on_off_div(b,d){
 
 function _blParseAlbumClass(_album)
 { 
-	this.v = "v0.0.13";
+	this.v = "v0.0.14";
 	var _aplayerListTa = null;
 	var _sDebug = _album.url;
 	this.title = _album.title;
@@ -85,11 +85,10 @@ function _blParseAlbumClass(_album)
 			_aplayerListTa = d.v.ta = blo0.blTextarea(d.v,d.v.id+"ta","ta","grey");
 			d.v.ta.style.width = "100%";
 			d.v.ta.style.height = "300px";
- 
-			var txt= _this.blhGetTxt(); 
-			d.v.ta.value = _this.blhCreateAPlayerList(txt); 
 		}
-		_on_off_div(b,d);
+ 
+		var txt= _this.blhGetTxt(); 
+		_aplayerListTa.value = _this.blhCreateAPlayerList(txt); 
 	}
 }
 function _blAlbumClass(_v,_list)
@@ -132,7 +131,7 @@ function _blAlbumClass(_v,_list)
 }
 function _blJobClass(p)
 { 
-	this.v = "v0.0.243"; 
+	this.v = "v0.0.244"; 
 	this.blrShowList = function(b , d){
 		
 		if(!d.v){
